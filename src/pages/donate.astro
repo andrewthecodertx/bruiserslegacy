@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets';
+import CaringForRescues from '../assets/caringforrescues.jpg';
+import PetFood from '../assets/pet-food.png';
+import DogTraining from '../assets/dog-training.png';
+import Dog from '../assets/dog.png'; 
+import Layout from '../layouts/main.astro';
+---
+
+<Layout>
+<!-- Hero Section -->
+<section id="donate-hero">
+  <h2 class="text-4xl my-6">Your support helps us rescue, heal, and find
+    forever homes for dogs in need.</h2>
+  <p class="italic font-light max-w-2xl">
+    Every contribution makes a difference in the lives of the dogs we rescue.
+    Thank you for your generosity and compassion.
+  </p>
+</section>
+
+<!-- Why Donate Section -->
+<section id="why-donate" class="mt-14">
+  <h3 class="text-4xl border-l-4 border-l-red-500 pl-6">Why Your Donation Matters</h3>
+  <p class="font-light mt-4">
+    At Bruiser's Legacy, we rely on the generosity of our community to continue
+    our mission of rescuing, rehabilitating, and rehoming dogs in need. Your
+    donations go directly toward:
+  </p>
+  <ul class="list-disc font-light ml-6 mt-4">
+    <li><strong>Food and Medical Care</strong>: Providing nutritious meals and
+      essential veterinary care for our dogs.</li>
+    <li><strong>Facility Upgrades</strong>: Ensuring our land and buildings are
+      safe and functional for the dogs in our care.</li>
+    <li><strong>Emergency Arrivals</strong>: Preparing our basement for
+      emergency arrivals, quarantined dogs, or moms with puppies.</li>
+    <li><strong>Fencing and Aesthetics</strong>: Installing reliable, safe
+      fencing that also enhances the appearance of our property.</li>
+    <li><strong>Community Programs</strong>: Supporting initiatives like
+      Sniffspot and Dog Vacay to help fund our rescue efforts.</li>
+    <li><strong>Education and Outreach</strong>: Offering education to new pet
+      owners and helping them prepare for their new furry family members.</li>
+  </ul>
+  <p class="font-light mt-4">
+    Every dollar you donate makes a difference in the lives of the dogs we
+    rescue. Thank you for your support!
+  </p>
+</section>
+
+<!-- How Donations Are Used Section -->
+<section id="how-donations-are-used" class="mt-14">
+  <h3 class="block text-6xl lg:text-9xl text-[#b0a1ba] pb-14">
+    your impact</h3>
+  <div class="lg:flex">
+      <div class="lg:w-1/2">
+        <Image src={CaringForRescues} alt="Caring for rescue dogs"
+        class="w-full h-[30vh] lg:h-[50vh] object-cover object-center rounded-lg shadow-lg" />
+      </div>
+      <div class="lg:w-1/2 lg:pl-10">
+      <h3 class="text-4xl border-l-4 border-l-green-900 pl-6 mt-6 lg:mt-0">
+        How Your Donations Are Used</h3>
+      <p class="font-light mt-4">
+        Your contributions help us achieve the following objectives:
+      </p>
+      <ul class="font-light mt-4">
+        <li class="mb-2">• Set up land and buildings to function for their intended purposes.</li>
+        <li class="mb-2">• Create a Sniffspot dog park on the back 1/3 of the property to support
+          the rescue.</li>
+        <li class="mb-2">• Prepare buildings with small yards for Dog Vacay services to help fund
+          the rescue.</li>
+        <li class="mb-2">• Ensure the basement is safe and ready for emergency arrivals,
+          quarantined dogs, or moms with puppies.</li>
+        <li class="mb-2">• Install reliable, safe fencing that also enhances the aesthetic appeal
+          of the front area.</li>
+        <li class="mb-2">• Support other local rescues with overflow or temporary placement for new
+          arrivals.</li>
+        <li class="mb-2">• Provide education for new pet owners on choosing the right dog,
+          preparing for a new pet, and understanding rescue dogs.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Donate Now Section -->
+<section id="donate-now" class="mt-14 border-t-2 pt-14">
+  <div class="text-center">
+    <h3 class="text-4xl font-bold">Donate Now</h3>
+    <p class="font-light max-w-2xl mx-auto mt-4">
+      Your generosity helps us continue our mission. Click the button below to
+      make a secure donation through Stripe.
+    </p>
+    <a href="https://buy.stripe.com/9AQdTNbDO2ZH0nuaEE" target="_blank"
+      rel="noopener noreferrer" class="inline-block bg-[#397367]
+      hover:bg-transparent text-white hover:text-green-900
+      border-[#397367] border my-12 p-6
+      shadow-2xl rounded-full transition-colors duration-500">
+      Donate via Stripe
+    </a>
+    <p class="font-light mt-4">
+      Thank you for supporting Bruiser's Legacy and the dogs in our care!
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+      <div class="flex flex-col items-center">
+        <Image src={PetFood} alt="Donate" />
+        <p class="font-bold pb-2">One-Time Gift</p>
+        <p class="text-center">Every donation, no matter the size, makes a difference.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={DogTraining} alt="Monthly Donor" />
+        <p class="font-bold pb-2">Monthly Donor</p>
+        <p class="text-center">Become a sustaining supporter with a monthly contribution.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={Dog} alt="In-Kind Donations" />
+        <p class="font-bold pb-2">In-Kind Donations</p>
+        <p class="text-center">Donate supplies like food, toys, and bedding for our rescues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</Layout>

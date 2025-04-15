@@ -1,62 +1,91 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
+import Bruiser from '../assets/bruiserandkathy.jpg';
+import MissionDogs from '../assets/mission-dogs.jpg';
+import Layout from '../layouts/main.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<Layout>
+<!-- Hero Section -->
+<section id="about-hero">
+  <h2 class="text-4xl my-6">Rescuing, Healing, and Finding Forever Homes</h2>
+  <p class="italic font-light">
+    Every dog deserves love, care, and a second chance. Bruiser’s Legacy is
+    dedicated to rescuing, rehabilitating, and rehoming dogs while educating
+    our community about responsible pet ownership.
+  </p>
+</section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+<!-- Mission Section -->
+<section id="mission" class="mt-14">
+  <div class="lg:flex">
+    <div class="lg:w-1/2 order-2">
+      <Image src={MissionDogs} alt="Dogs playing together"
+        class="w-full h-[30vh] lg:h-[50vh] object-cover object-center rounded-lg shadow-lg" />
+    </div>
+      <div class="lg:w-1/2 lg:pr-12">
+      <h3 class="text-4xl border-l-4 border-l-red-500 pl-6">Our Mission</h3>
+      <p class="font-light mt-4">
+        Bruiser’s Legacy provides a safe and nurturing environment for dogs
+        who have been abandoned, abused, or are simply in need of a second
+        chance. Through rescue, rehabilitation, and education, we strive to
+        make a difference—one paw at a time.
+      </p>
+    </div>
+  </div>
+</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+<!-- Our Story Section -->
+<section id="our-story" class="mt-14">
+  <h3 class="block text-6xl lg:text-9xl text-[#b0a1ba] pb-14">our story</h3>
+  <div class="lg:flex">
+    <div class="lg:w-[50%]">
+        <Image src={Bruiser} alt="Bruiser, the dog who inspired the rescue"
+          class="w-full h-[30vh] lg:h-[50vh] object-cover object-center rounded-lg shadow-lg" />
+    </div>
+      <div class="lg:w-1/2 lg:pl-10">
+      <h3 class="text-4xl border-l-4 border-l-green-900 pl-6 mt-6 lg:mt-0">
+        The Story Behind Bruiser’s Legacy</h3>
+      <p class="font-light font-[Inter] mt-4">
+        Bruiser was more than a pet—he was a protector, a friend, and an
+        inspiration. His unconditional love and resilience led us to create a
+        rescue that would continue his mission. Today, we honor Bruiser by
+        saving lives, one dog at a time.
+      </p>
+      <a href="the-calling-why-i-founded-a-dog-rescue.html"
+        class="inline-block bg-transparent hover:bg-green-900 text-green-900
+        hover:text-white transition-colors duration-500 my-8 p-6
+        shadow-2xl border border-green-900 rounded-full">
+        Read Bruiser’s Full Story
+      </a>
+    </div>
+  </div>
+</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+<!-- Objectives Section -->
+<section id="objectives" class="mt-14">
+  <h3 class="text-4xl border-l-4 border-l-red-500 pl-6">Our Objectives</h3>
+  <ul class="list-disc font-light ml-6 mt-4">
+    <li><strong>Safe & Functional Facilities:</strong> Designed to meet the
+      needs of rescue dogs, from emergency arrivals to long-term residents.</li>
+    <li><strong>Community Support:</strong> Partnering with programs like
+      Sniffspot and Dog Vacay to help fund our efforts.</li>
+    <li><strong>Emergency Care:</strong> Providing safe, immediate housing for
+      at-risk dogs, moms with puppies, and rescues in need.</li>
+    <li><strong>Education:</strong> Helping families understand the
+      responsibilities of dog adoption and care.</li>
+    <li><strong>Rescue Collaboration:</strong> Supporting other rescues with
+      overflow placement and temporary care.</li>
+  </ul>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+    <a href="/donate" role="button" class="inline-block bg-[#397367]
+    hover:bg-transparent text-white hover:text-green-900
+    border-[#397367] border my-12 p-6
+    shadow-2xl rounded-full transition-colors duration-500">
+    Get Involved Today
+  </a>  
+
+</section>
+
+
 </Layout>

@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../assets/surrealdog-bg.jpg';
+import Link from './link.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class="fixed top-0 left-0 right-0 flex justify-between items-center bg-[#b2e6ce] px-8 py-2 opacity-90 shadow">
+  <div class="flex">
+    <Image src={Logo} alt="Bruiser's Legacy" class="rounded-full w-14 h-14" />
+    <h1 class="pt-3 pl-4">
+      <a href="/" class="text-gray-600 text-lg lg:text-3xl">{SITE_TITLE}</a>
+    </h1>
+  </div>
+  <div>
+    <label for="menuToggle" class="flex flex-col lg:hidden peer">
+      <input type="checkbox" id="menuToggle" name="menuToggle"
+        class="toggle hidden" />
+      <div class="cursor-pointer burger">
+        <div class="bg-gray-700 mb-1 h-0.5 w-5 transition-transform duration-600"></div>
+        <div class="bg-gray-700 mb-1 h-0.5 w-5 transition-opacity duration-600"></div>
+        <div class="bg-gray-700 h-0.5 w-5 transition-transformduration-600"></div>
+      </div>
+    </label>
+    <nav class="pt-16 mt-8 lg:pt-0 lg:mt-0 absolute lg:relative h-screen lg:h-full w-6/12 lg:w-fit right-0 top-10 lg:top-0 lg:left-0 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-4 translate-x-full lg:translate-x-0 transition-transform bg-[#b2e6ce] opacity-90 duration-500 peer-has-checked:translate-x-0">
+      <Link href="/" 
+        class="text-[#b2e6ce] bg-[#2b061e] rounded-3xl px-6 py-2 hover:text-red-500 transition-colors duration-500">
+        HOME
+      </Link>
+      <Link href="/about" 
+        class="text-[#b2e6ce] bg-[#2b061e] rounded-3xl px-6 py-2 hover:text-red-500 transition-colors duration-500">
+        ABOUT US
+      </Link> 
+      <Link href="/contact" 
+        class="text-[#b2e6ce] bg-[#2b061e] rounded-3xl px-6 py-2 hover:text-red-500 transition-colors duration-500">
+        CONTACT
+      </Link>
+      <Link href="/donate" 
+        class="text-[#b2e6ce] bg-[#2b061e] rounded-3xl px-6 py-2 hover:text-red-500 transition-colors duration-500">
+        GET INVOLVED
+      </Link>
+      <div class="lg:hidden border-t-2 border-t-purple-600 w-3/4 px-4">
+        CONTACT
+      </div>
+    </nav>
+  </div>
+</header>
+<style>
+  
+</style>

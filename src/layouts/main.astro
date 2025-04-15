@@ -1,0 +1,29 @@
+---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://fav.farm/💩" />
+  <title>Bruiser's Legacy</title>
+</head>
+
+<body class="bg-teal-300">
+  <Header/>
+
+  <main class="px-12 mt-24">
+    <slot />
+  </main>
+
+  <Footer/>
+  
+</body>
+
+</html>

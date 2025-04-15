@@ -1,49 +1,134 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import RainbowBridge from '../assets/rainbowbridge.jpg';
+import WaysToHelp from '../assets/waystohelp.jpg';
+import DogGroup from '../assets/doggroup.jpg';
+import PetFood from '../assets/pet-food.png';
+import DogTraining from '../assets/dog-training.png';
+import Dog from '../assets/dog.png';
+import Adopt from '../assets/adopt.png';
+import DogPoster from '../assets/dogposter.jpg';
+import Layout from '../layouts/main.astro';
 ---
+<Layout>
+<!-- Hero Section -->
+<section id="hero">
+  <p class="text-2xl">BRUISER'S LEGACY</p>
+  <div class="lg:flex">
+      <div class="lg:w-1/2 order-2">
+        <Image src={RainbowBridge} alt="The Rainbow Bridge"
+        class="w-full h-[30vh] lg:h-[calc(100vh-2rem)] object-cover object-center" />
+    </div>
+    <div class="lg:w-[50%] lg:mt-[10%] lg:pr-12">
+      <h2 class="text-4xl w-full my-6">Healing. Health. Happiness.</h2>
+      <p class="w-full italic font-light">In honor of
+        Bruiser, a beloved companion and co-rescuer, we are dedicated to giving
+        dogs a second chance at life. Through rescue, rehabilitation, and
+        community education, we strive to make a difference-one paw at a
+        time.</p>
+      <Image src={WaysToHelp} alt="WAYS TO HELP" class="pt-4" />
+      <a href="/donate" role="button" class="inline-block bg-[#397367]
+        hover:bg-transparent text-white hover:text-green-900
+        border-[#397367] border text-sm my-12 p-6
+        shadow-2xl rounded-full transition-colors duration-500">
+        How You Can Help
+      </a>
+    </div>
+  </div>
+  <h3 class="block text-6xl lg:text-9xl text-[#b0a1ba]">legacy</h3>
+</section>
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<!-- Legacy Section -->
+<section id="about-us" class="mt-14">
+  <div class="lg:flex">
+    <div class="lg:w-[50%]">
+      <Image src={DogGroup} alt="Dogs playing together"
+        class="w-full h-[30vh] lg:h-[50vh] object-cover object-center" />
+    </div>
+    <div class="lg:w-[50vw] lg:pl-[10%]">
+      <h3 class="text-4xl w-full border-l border-l-red-500
+        pl-6 mt-6 lg:mt-0">We Create Succesful
+        Matches Between Rescue Dogs and Loving Families</h3>
+      <a href="/about" role="button" class="inline-block bg-transparent
+        hover:bg-green-900 text-green-900 hover:text-white transition-colors
+        duration-500 my-8 p-6 shadow-2xl
+        border border-green-900 rounded-full">
+        Learn More About Us
+      </a>
+      <p class="w-full font-light">At Bruiser's Legacy,
+        we believe every dog deserves a chance to find their perfect home.
+        Through our foster-based program, we provide a safe haven where rescued
+        dogs can heal, learn, and prepare for their new beginnings. Our
+        experienced team takes time to understand each dog’s unique personality,
+        needs, and quirks, ensuring they’re matched with families who can give
+        them the love and care they deserve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- What We Do Section -->
+<section id="services" class="mt-14">
+  <h3 class="block text-6xl lg:text-9xl text-[#b0a1ba]">
+    what we do</h3>
+  <Image src={DogPoster} alt="HELP DOGS!" class="w-full py-4" />
+  <ul class="flex pt-2">
+    <li class="py-2 pr-2">
+      <p class="block py-4 font-bold">Emergency Care</p>
+      <p class="text-gray-600">Our facilities are equipped to handl
+        eemergency arrivals, quarantined dogs, and moms with puppies.</p>
+    </li>
+    <li class="p-2">
+      <p class="block py-4 font-bold">Fostering</p>
+      <p class="text-gray-600">We provide a loving temporary home for
+        dogs while they wait for their forever families.</p>
+    </li>
+    <li class="p-2">
+      <p class="block py-4 font-bold">Suport</p>
+      <p class="text-gray-600">We assist local rescues
+        with overflow or temporary placement, ensuring every dog has a safe
+        place to stay.</p>
+    </li>
+    <li class="p-2">
+      <p class="block py-4 font-bold">Transportation</p>
+      <p class="text-gray-600">We assist local rescues
+        with overflow or temporary placement, ensuring every dog has a safe
+        place to stay.</p>
+    </li>
+  </ul>
+</section>
+
+<!-- How to Help Section -->
+<section id="how-to-help" class="mt-14 border-t-2 pt-14">
+  <div class="flex flex-col items-center">
+    <h3 class="font-bold">How You Can Help</h3>
+    <p class="text-center">There are many ways to support Bruiser's Legacy and
+      the dogs in our care!</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+      <div class="flex flex-col items-center">
+        <Image src={PetFood} alt="DONATE!" />
+        <p class="font-bold pb-2">Donate</p>
+        <p class="text-center">Your support helps us provide food,
+          medical care, and shelter for dogs in need.</p>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <Image src={DogTraining} alt="DONATE!" />
+        <p class="font-bold pb-2">Voluneteer</p>
+        <p class="text-center">Join our team and make a difference in
+          the lives of rescue dogs.</p>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+          <Image src={Dog} alt="DONATE!" />
+        <p class="font-bold pb-2">Foster</p>
+        <p class="text-center">Open your home to a dog in need and help
+          them prepare for their forever home.</p>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+          <Image src={Adopt} alt="DONATE!" />
+        <p class="font-bold pb-2">Adopt</p>
+        <p class="text-center">Give a rescue dog a second chance at life
+          and find your new best friend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</Layout>
