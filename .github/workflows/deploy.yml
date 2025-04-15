@@ -33,5 +33,5 @@ jobs:
           rm -rf node_modules
           npm install
           npm run astro build
-          $PM2_DIR/pm2 restart bruiserslegacy_astro
+          $PM2_DIR/pm2 restart bruiserslegacy
           ENDSSH
